@@ -1,0 +1,205 @@
+* {
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    /* background-color:#60cfd1; */
+    background-color:#fff;
+}
+
+.eevee-container {
+    max-width: 1400px;
+    margin: auto;
+    display: flex;
+    height: 100vh;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 1rem;
+}
+
+.eevee-description {
+    flex: 1 1 30rem;
+    order: 2;
+    margin-top: -5rem;
+}
+.eevee {
+    flex: 1 1 30rem;
+    text-align: center;
+    order: 1;
+}
+
+.eevee-traits {
+    text-align: center;
+    background-color: #60cfd1;
+    border-radius: 25px;
+    padding: 0.5rem;
+
+}
+
+
+
+
+.eevee svg {
+    width: 250px;
+}
+
+#tail {
+    animation: tail2 0.5s ease-in alternate infinite;
+    transform-origin: bottom;
+}
+
+
+
+#head {
+    animation: head 1s linear alternate infinite;
+    transform-origin: bottom;
+}
+
+#scarf {
+    animation: scarf 1s linear alternate infinite;
+    transform-origin: bottom;
+}
+
+#whole-eevee {
+    animation: bounce 0.5s linear alternate infinite;
+    transform-origin: bottom;
+}
+
+#real-front-feet {
+    animation: front-feet 1s linear alternate infinite;
+    transform-origin: bottom;
+}
+
+#feet-behind {
+    animation: feet-behind 1s linear alternate infinite;
+    transform-origin: bottom;
+  
+ 
+}
+
+
+.eevee-description h3 {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.main-description {
+    margin-bottom: 2rem;
+}
+
+.main-description p {
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+}
+
+.eevee-traits h4 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: 
+}
+
+.eevee-traits p {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+
+@media (min-width: 580px) {
+    .eevee-traits {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .eevee svg {
+        width: 350px;
+    }
+}
+
+
+@keyframes feet-behind {
+    from {
+        transform: skewY(5deg)
+    }
+
+    to {
+        transform: skew(2deg)
+    }
+}
+
+
+
+@keyframes front-feet {
+    from {
+        transform: skew(-2deg)
+    }
+
+    to {
+        transform: skew(1deg)
+    }
+}
+
+
+
+@keyframes scarf {
+    from {
+        
+        transform: rotateZ(0deg);
+    }
+
+    to {
+     
+        transform: rotateZ(-1deg);
+    }
+}
+
+@keyframes head {
+    from{
+        transform: rotateZ(1deg);
+    }
+    to{
+        transform: rotateZ(0deg)
+    }
+}
+
+
+@keyframes run {
+    from {
+        transform: translateX(0%)
+    }
+
+    to {
+        transform: translateX(50%)
+    }
+}
+
+@keyframes bounce {
+    from {
+        
+        transform: rotateX(0deg);
+    }
+
+    to {
+     
+        transform: rotateX(25deg);
+    }
+}
+
+
+
+
+
+@keyframes tail2 {
+    from {
+        
+        transform: rotateZ(0deg);
+    }
+
+    to {
+     
+        transform: rotateZ(1deg);
+    }
+}
